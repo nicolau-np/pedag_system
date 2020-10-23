@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
+    'default' => 'uploads',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,6 +65,10 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
         ],
 
+        'uploads' => [
+            'driver' => 'local',
+            'root' => public_path(),
+        ],
     ],
 
     /*
