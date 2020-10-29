@@ -5,16 +5,17 @@ use Illuminate\Support\Facades\DB;
 
 class TipoSalaSeeder extends Seeder
 {
-    static $turnos = [
-        "Manhã",
-        "Tarde",
-        "Noite"
+    static $tipo_salas = [
+        "Normal",
+        "Laboratório",
+        "Anexa",
+        "Salão"
     ];
     public function run()
     {
-        foreach(Self::$turnos as $turno){
-            DB::table('turnos')->insert([
-                'turno'=>$turno
+        foreach(Self::$tipo_salas as $tipo_sala){
+            DB::table('tipo_salas')->insert([
+                'tipo'=>$tipo_sala
             ]);
         }
     }

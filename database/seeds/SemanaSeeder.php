@@ -5,15 +5,18 @@ use Illuminate\Support\Facades\DB;
 
 class SemanaSeeder extends Seeder
 {
-    static $desistencias = [
-        "Transferência",
-        "Desistência"
+    static $semanas = [
+        "Segunda",
+        "Terça",
+        "Quarta",
+        "Quinta",
+        "Sexta"
     ];
     public function run()
     {
-        foreach(Self::$desistencias as $desistencia){
-            DB::table('tipo_desistencias')->insert([
-                'tipo'=>$desistencia
+        foreach(Self::$semanas as $semana){
+            DB::table('semanas')->insert([
+                'semana'=>$semana
             ]);
         }
     }
